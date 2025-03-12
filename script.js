@@ -48,6 +48,12 @@
 
 // console.log(board);
 
-const horn = () => {
-  console.log("Toot");
-};
+// const horn = () => {
+//   console.log("Toot");
+// };
+
+function greet(who) {
+  console.log("Hello " + who);
+}
+greet("Harry");
+console.log("Bye");
