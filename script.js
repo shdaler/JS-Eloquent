@@ -58,10 +58,10 @@
 // greet("Harry");
 // console.log("Bye");
 
-function chicken() {
-  return egg();
+function minus(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
 }
-function egg() {
-  return chicken();
-}
-console.log(chicken() + " came first.");
+
+console.log(minus(10));
+console.log(minus(10, 5));
