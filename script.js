@@ -30,7 +30,7 @@
 //   console.log(output || i);
 // }
 
-let size = 8; // Размер доски
+let size = 9; // Размер доски
 let board = ""; // Пустая строка, куда будем добавлять символы
 
 for (let y = 0; y < size; y++) {
