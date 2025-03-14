@@ -66,9 +66,21 @@
 // console.log(minus(10));
 // console.log(minus(10, 5));
 
-function multiplier(factor) {
-  return (number) => number * factor;
+// function multiplier(factor) {
+//   return (number) => number * factor;
+// }
+
+// let twice = multiplier(2);
+// console.log(twice(5));
+
+function createCounter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
 }
 
-let twice = multiplier(2);
-console.log(twice(5));
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
