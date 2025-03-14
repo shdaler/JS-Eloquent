@@ -101,7 +101,7 @@ function startTimer() {
   setInterval(() => {
     count++;
     console.log(`Прошло секунд: ${count}`);
-  }, 1000);
+  }, 10);
 }
 
 startTimer();
