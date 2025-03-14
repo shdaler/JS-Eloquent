@@ -73,14 +73,25 @@
 // let twice = multiplier(2);
 // console.log(twice(5));
 
-function createCounter() {
-  let count = 0;
-  return function () {
-    count++;
-    return count;
-  };
+// function createCounter() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter = createCounter();
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+
+function outer() {
+  let a = 10;
+  function inner() {
+    console.log(a); // 10 (доступ к переменной из внешнего окружения)
+  }
+  return inner;
 }
 
-const counter = createCounter();
-console.log(counter()); // 1
-console.log(counter()); // 2
+const fn = outer();
+fn(); // Вызов inner, но она помнит "a" через лексическое окружение
