@@ -96,13 +96,27 @@
 // const fn = outer();
 // fn(); // Вызов inner, но она помнит "a" через лексическое окружение
 
-function startTimer() {
+// function startTimer() {
+//   let count = 0;
+//   setInterval(() => {
+//     count++;
+//     console.log(`Прошло секунд: ${count}`);
+//   }, 1000);
+// }
+
+// startTimer();
+// Каждую секунду увеличивает `count` и выводит его в консоль
+
+function createCounter() {
   let count = 0;
-  setInterval(() => {
-    count++;
-    console.log(`Прошло секунд: ${count}`);
-  }, 1000);
+  return {
+    increment: () => ++count,
+    decrement: () => --count,
+    getCount: () => count,
+  };
 }
 
-startTimer();
-// Каждую секунду увеличивает `count` и выводит его в консоль
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.getCount()); // 2
