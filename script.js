@@ -58,10 +58,17 @@
 // greet("Harry");
 // console.log("Bye");
 
-function minus(a, b) {
-  if (b === undefined) return -a;
-  else return a - b;
+// function minus(a, b) {
+//   if (b === undefined) return -a;
+//   else return a - b;
+// }
+
+// console.log(minus(10));
+// console.log(minus(10, 5));
+
+function multiplier(factor) {
+  return (number) => number * factor;
 }
 
-console.log(minus(10));
-console.log(minus(10, 5));
+let twice = multiplier(2);
+console.log(twice(5));
