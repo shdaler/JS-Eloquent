@@ -85,13 +85,24 @@
 // console.log(counter()); // 1
 // console.log(counter()); // 2
 
-function outer() {
-  let a = 10;
-  function inner() {
-    console.log(a); // 10 (доступ к переменной из внешнего окружения)
-  }
-  return inner;
+// function outer() {
+//   let a = 10;
+//   function inner() {
+//     console.log(a); // 10 (доступ к переменной из внешнего окружения)
+//   }
+//   return inner;
+// }
+
+// const fn = outer();
+// fn(); // Вызов inner, но она помнит "a" через лексическое окружение
+
+function startTimer() {
+  let count = 0;
+  setInterval(() => {
+    count++;
+    console.log(`Прошло секунд: ${count}`);
+  }, 1000);
 }
 
-const fn = outer();
-fn(); // Вызов inner, но она помнит "a" через лексическое окружение
+startTimer();
+// Каждую секунду увеличивает `count` и выводит его в консоль
