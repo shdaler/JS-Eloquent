@@ -107,17 +107,27 @@
 // startTimer();
 // Каждую секунду увеличивает `count` и выводит его в консоль
 
-function createCounter() {
-  let count = 0;
-  return {
-    increment: () => ++count,
-    decrement: () => --count,
-    getCount: () => count,
-  };
+// function createCounter() {
+//   let count = 0;
+//   return {
+//     increment: () => ++count,
+//     decrement: () => --count,
+//     getCount: () => count,
+//   };
+// }
+
+// const counter = createCounter();
+// console.log(counter.increment()); // 1
+// console.log(counter.increment()); // 2
+// console.log(counter.decrement()); // 1
+// console.log(counter.getCount()); // 1
+
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
 }
 
-const counter = createCounter();
-console.log(counter.increment()); // 1
-console.log(counter.increment()); // 2
-console.log(counter.decrement()); // 1
-console.log(counter.getCount()); // 1
+console.log(power(2, 3));
