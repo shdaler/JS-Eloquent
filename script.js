@@ -140,8 +140,8 @@ function findSolution(target) {
       return null;
     } else {
       return (
-        find(current + 5, `(${history} + 5)`) ??
-        find(current * 3, `(${history} * 3)`)
+        find(current + 5, `(${history} + 4)`) ??
+        find(current * 3, `(${history} * 2)`)
       );
     }
   }
