@@ -141,7 +141,7 @@ function findSolution(target) {
     } else {
       return (
         find(current + 5, `(${history} + 4)`) ??
-        find(current * 3, `(${history} * 2)`)
+        find(current * 3, `(${history} * 3)`)
       );
     }
   }
