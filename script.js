@@ -141,11 +141,11 @@ function findSolution(target) {
     } else {
       return (
         find(current + 5, `(${history} + 4)`) ??
-        find(current * 3, `(${history} * 2)`)
+        find(current * 3, `(${history} * 3)`)
       );
     }
   }
   return find(1, "1");
 }
 
-console.log(findSolution(25));
+console.log(findSolution(24));
